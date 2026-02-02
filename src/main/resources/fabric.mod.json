@@ -3,13 +3,18 @@
 	"id": "nestweaver-origin",
 	"version": "${version}",
 	"name": "Nestweaver Origin",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Add-on for Origins mod",
 	"authors": [
-		"Me!"
+		{
+			"name": "capsey_",
+			"contact": {
+				"homepage": "https://github.com/capsey/"
+			}
+		}
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/capsey/nestweaver-origin",
+		"issues": "https://github.com/capsey/nestweaver-origin/issues"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/nestweaver-origin/icon.png",
@@ -33,6 +38,7 @@
 		"fabricloader": ">=0.18.4",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"origins": "1.10.x"
 	}
 }
