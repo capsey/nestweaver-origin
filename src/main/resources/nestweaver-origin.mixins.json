@@ -1,14 +1,16 @@
 {
-	"required": true,
-	"package": "net.capsey.nestweaver.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-		"ExampleMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
+    "required": true,
+    "package": "net.capsey.nestweaver.mixin",
+    "compatibilityLevel": "JAVA_17",
+    "mixins": [
+        "HurtByTargetGoalMixin",
+        "SpiderMixin",
+        "SpiderTargetGoalMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    },
+    "overwrites": {
+        "requireAnnotations": true
 	}
 }

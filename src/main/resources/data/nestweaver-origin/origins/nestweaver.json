@@ -1,0 +1,14 @@
+{
+    "powers": [
+        "origins:climbing",
+        "origins:no_cobweb_slowdown",
+        "origins:no_shield",
+        "origins:carnivore",
+        "origins:arthropod",
+        "nestweaver-origin:spider_kinship"
+    ],
+    "icon": {
+        "item": "minecraft:spawner"
+    },
+    "impact": 2
+}
