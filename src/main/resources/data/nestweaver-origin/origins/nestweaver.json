@@ -5,8 +5,9 @@
         "origins:no_shield",
         "origins:carnivore",
         "origins:arthropod",
+        "nestweaver-origin:spawn_children",
         "nestweaver-origin:spider_kinship",
-        "nestweaver-origin:spawn_children"
+        "nestweaver-origin:venomous_bite"
     ],
     "icon": {
         "item": "minecraft:spawner"

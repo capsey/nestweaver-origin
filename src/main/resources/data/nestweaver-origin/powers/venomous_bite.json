@@ -1,0 +1,49 @@
+{
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:target_action",
+                "action": {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:poison",
+                        "duration": 100,
+                        "show_particles": true,
+                        "show_icon": true
+                    }
+                }
+            },
+            {
+                "type": "origins:actor_action",
+                "action": {
+                    "type": "origins:feed",
+                    "food": 2,
+                    "saturation": 2
+                }
+            }
+        ]
+    },
+    "bientity_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:actor_condition",
+                "condition": {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                }
+            },
+            {
+                "type": "origins:entity_group",
+                "group": "arthropod",
+                "inverted": true
+            }
+        ]
+    },
+    "cooldown": 40
+}
