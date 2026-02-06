@@ -1,6 +1,7 @@
 package net.capsey.nestweaver.mixin;
 
 import net.capsey.nestweaver.NestweaverOrigin;
+import net.capsey.nestweaver.OwnableSpider;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
@@ -19,6 +20,6 @@ abstract class SpiderTargetGoalMixin<T extends LivingEntity> extends NearestAtta
 
     @Inject(method = "<init>", at = @At(value = "TAIL"))
     public void init(Spider spider, Class<T> class_, CallbackInfo ci) {
-        this.targetConditions = TargetingConditions.forCombat().range(this.getFollowDistance()).selector(entity -> !NestweaverOrigin.SPIDER_KINSHIP.isActive(entity));
+        this.targetConditions = TargetingConditions.forCombat().range(this.getFollowDistance()).selector(entity -> !((OwnableSpider) spider).hasOwner() && !NestweaverOrigin.SPIDER_KINSHIP.isActive(entity));
     }
 }

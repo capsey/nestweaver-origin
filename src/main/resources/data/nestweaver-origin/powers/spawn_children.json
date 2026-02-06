@@ -1,0 +1,13 @@
+{
+    "type": "origins:active_self",
+    "cooldown": 1200,
+    "key": "key.origins.secondary_active",
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "function nestweaver-origin:spawn_children"
+    },
+    "hud_render": {
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "bar_index": 5
+    }
+}

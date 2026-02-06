@@ -48,7 +48,7 @@ abstract class SpiderMixin extends Monster implements OwnableSpider {
     @Inject(method = "registerGoals", at = @At(value = "TAIL"))
     private void registerGoals(CallbackInfo ci) {
         Spider spider = (Spider)(Object)this;
-        this.goalSelector.addGoal(6, new SpiderFollowOwnerGoal(spider, 1.0, 8.0F, 3.0F));
+        this.goalSelector.addGoal(8, new SpiderFollowOwnerGoal(spider, 1.0, 10.0F, 2.0F));
         this.targetSelector.addGoal(1, new SpiderOwnerHurtByTargetGoal(this));
         this.targetSelector.addGoal(2, new SpiderOwnerHurtTargetGoal(this));
     }
