@@ -39,9 +39,12 @@
                 }
             },
             {
-                "type": "origins:entity_group",
-                "group": "arthropod",
-                "inverted": true
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:entity_group",
+                    "group": "arthropod",
+                    "inverted": true
+                }
             }
         ]
     },
