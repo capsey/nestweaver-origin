@@ -5,6 +5,10 @@
         "origins:no_shield",
         "origins:carnivore",
         "origins:arthropod",
+        "nestweaver-origin:master_of_webs",
+        "nestweaver-origin:mineshaft_spawn",
+        "nestweaver-origin:night_vision",
+        "nestweaver-origin:poison_immunity",
         "nestweaver-origin:spawn_children",
         "nestweaver-origin:spider_kinship",
         "nestweaver-origin:venomous_bite"
