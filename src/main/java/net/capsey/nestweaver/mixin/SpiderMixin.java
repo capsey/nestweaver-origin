@@ -5,7 +5,9 @@ import net.capsey.nestweaver.ai.goal.SpiderFollowOwnerGoal;
 import net.capsey.nestweaver.ai.goal.SpiderOwnerHurtByTargetGoal;
 import net.capsey.nestweaver.ai.goal.SpiderOwnerHurtTargetGoal;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.players.OldUsersConverter;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.TamableAnimal;
@@ -15,6 +17,7 @@ import net.minecraft.world.entity.monster.Ghast;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.Spider;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
@@ -92,5 +95,14 @@ abstract class SpiderMixin extends Monster implements OwnableSpider {
         if (uUID != null) {
             this.setOwnerUUID(uUID);
         }
+    }
+
+    @Override
+    public void die(DamageSource damageSource) {
+        if (!this.level().isClientSide && this.level().getGameRules().getBoolean(GameRules.RULE_SHOWDEATHMESSAGES) && this.getOwner() instanceof ServerPlayer) {
+            this.getOwner().sendSystemMessage(this.getCombatTracker().getDeathMessage());
+        }
+
+        super.die(damageSource);
     }
 }

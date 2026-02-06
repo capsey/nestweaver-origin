@@ -7,7 +7,7 @@
         "command": "function nestweaver-origin:spawn_children"
     },
     "hud_render": {
-        "sprite_location": "origins:textures/gui/resource_bar.png",
-        "bar_index": 5
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+        "bar_index": 17
     }
 }
