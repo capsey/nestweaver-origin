@@ -1,6 +1,7 @@
 package net.capsey.nestweaver.mixin;
 
 import net.capsey.nestweaver.NestweaverOrigin;
+import net.capsey.nestweaver.OwnableSpider;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
@@ -19,9 +20,9 @@ abstract class HurtByTargetGoalMixin extends TargetGoal {
 
     @Inject(method = "canUse", at = @At(value = "HEAD"), cancellable = true)
     public void canUse(CallbackInfoReturnable<Boolean> cir) {
-        if (this.mob instanceof Spider) {
+        if (this.mob instanceof OwnableSpider spider) {
             LivingEntity target = this.mob.getLastHurtByMob();
-            if (NestweaverOrigin.SPIDER_KINSHIP.isActive(target)) {
+            if (spider.getOwner() == target) {
                 cir.setReturnValue(false);
                 cir.cancel();
             }
