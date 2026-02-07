@@ -3,7 +3,7 @@
 	"id": "nestweaver-origin",
 	"version": "${version}",
 	"name": "Nestweaver Origin",
-	"description": "Add-on for Origins mod",
+	"description": "Carry the nest within, and let your children walk beside you as shield and shadow in this add-on for the Origins mod",
 	"authors": [
 		{
 			"name": "capsey_",
@@ -16,7 +16,7 @@
 		"homepage": "https://github.com/capsey/nestweaver-origin",
 		"issues": "https://github.com/capsey/nestweaver-origin/issues"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/nestweaver-origin/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -39,6 +39,6 @@
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*",
-		"origins": "1.10.2"
+		"origins": "~1.10.2"
 	}
 }
