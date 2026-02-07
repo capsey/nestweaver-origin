@@ -5,6 +5,7 @@
         "origins:no_shield",
         "origins:carnivore",
         "origins:arthropod",
+        "nestweaver-origin:fragility",
         "nestweaver-origin:master_of_webs",
         "nestweaver-origin:mineshaft_spawn",
         "nestweaver-origin:night_vision",
