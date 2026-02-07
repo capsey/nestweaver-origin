@@ -4,6 +4,7 @@
     "compatibilityLevel": "JAVA_17",
     "mixins": [
         "HurtByTargetGoalMixin",
+        "LivingEntityMixin",
         "MobMixin",
         "SpiderMixin",
         "SpiderTargetGoalMixin"
